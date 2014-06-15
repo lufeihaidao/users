@@ -1,0 +1,14 @@
+zh-CN:
+  action:
+    sign_in: 登录
+    edit: 编辑%{model}
+    create: 添加%{model}
+    sign_up: 注册
+    sign_out: 退出
+    forgot_password: 忘记密码?
+    change_password: 更改密码
+    no_confirmation: 没收到验证?
+    no_unlock: 没收到解锁说明?
+    sign_in_with: 用%{auth}登录
+    submit: 提交
+    back: 后退

@@ -1,0 +1,42 @@
+h2 Change your password
+= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f|
+  = f.error_notification
+  = f.input :reset_password_token, as: :hidden
+  = f.full_error :reset_password_token
+  .form-inputs
+    = f.input :password, label: "New password", required: true, autofocus: true
+    = f.input :password_confirmation, label: "Confirm your new password", required: true
+  .form-actions
+    = f.button :submit, "Change my password"
+= render "devise/shared/links"
+
+/ .container
+/   .ui.attached.message
+/     .header
+/       = t('action.change_password')
+/   = form_for(resource, as: resource_name, url: password_path(resource_name),
+/              html: { id: "forgot_password", method: :put,
+/                      class: "ui form attached fluid segment"}) do |f|
+/     - error_msgs = f.object.errors.full_messages
+/     - if error_msgs.any?
+/       .ui.red.message
+/         - error_msgs.each do |m|
+/           li= m
+/     = f.hidden_field :reset_password_token
+/     .field
+/       = f.label :password
+/       .ui.left.labeled.icon.input
+/         = f.password_field :password, autofocus: true
+/         i.user.icon
+/         .ui.corner.label
+/           i.icon.asterisk
+/     .field
+/       = f.label :password_confirmation
+/       .ui.left.labeled.icon.input
+/         = f.password_field :password_confirmation
+/         i.lock.icon
+/         .ui.corner.label
+/           i.icon.asterisk
+/     = f.submit t('action.submit'), class: "ui blue submit button"
+/   .ui.bottom.attached.info.message
+/     = render "devise/shared/links"

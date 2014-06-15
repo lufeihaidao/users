@@ -1,0 +1,6 @@
+- flash.each do |key, msg|
+  - key = normal_key(key)
+  - if msg.is_a?(String)
+    div[class = "ui #{key} message"]
+      i.close.icon
+      .list= msg

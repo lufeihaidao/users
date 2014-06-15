@@ -1,0 +1,20 @@
+.container
+  table.ui.padded.table.segment
+    thead
+      tr
+        th= User.human_attribute_name :email
+        th= User.human_attribute_name :name
+        th= User.human_attribute_name :phone
+        th= User.human_attribute_name :qq
+        th= User.human_attribute_name :birthday
+        th= User.human_attribute_name :admin
+    tbody#users
+      =render @users
+    - if current_user.admin
+      tfoot
+        tr
+          th colspan="6"
+            = link_to new_user_path, class: "ui blue labeled icon button" do
+              i.user.icon
+              = t('action.create', model: t('activerecord.models.user'))
+  #users-paginator= paginate @users

@@ -1,0 +1,37 @@
+.container
+  .ui.attached.message
+    .header
+      = t('action.sign_up')
+  = form_for(resource, as: resource_name, url: registration_path(resource_name),
+             html: { method: :put, id: "user_sign_up",
+                     class: "ui form attached fluid segment"}) do |f|
+    - error_msgs = f.object.errors.full_messages
+    / - binding.pry
+    - if error_msgs.any?
+      .ui.red.message
+        - error_msgs.each do |m|
+          li= m
+    .field
+      = f.label :email
+      .ui.left.labeled.icon.input
+        = f.text_field :email, autofocus: true
+        i.user.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .field
+      = f.label :password
+      .ui.left.labeled.icon.input
+        = f.password_field :password, autocomplete: "off"
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .field
+      = f.label :password_confirmation
+      .ui.left.labeled.icon.input
+        = f.password_field :password_confirmation, autocomplete: "off"
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    = f.submit t('action.submit'), class: "ui blue submit button"
+  .ui.bottom.attached.info.message
+    = render "devise/shared/links"

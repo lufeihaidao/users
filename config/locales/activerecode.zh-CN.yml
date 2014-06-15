@@ -1,0 +1,17 @@
+zh-CN:
+  activerecord:
+    models:
+      user: "用户"
+    attributes:
+      user:
+        admin: "管理员"
+        name: "用户名"
+        birtyday: "生日"
+        email: "邮箱"
+        password: "密码"
+        birthday: "生日"
+        qq: "企鹅号"
+        password_confirmation: "密码验证"
+        phone: "电话"
+        remember_me: "记住我"
+        current_password: 当前密码

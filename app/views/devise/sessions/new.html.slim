@@ -1,0 +1,30 @@
+.container
+  .ui.attached.message
+    .header
+      = t('action.sign_in')
+  = form_for(resource, as: resource_name, url: session_path(resource_name),
+             html: { id: "user_sign_in",
+                     class: "ui form attached fluid segment"}) do |f|
+    / .ui.error.message
+    .field
+      = f.label :email
+      .ui.left.labeled.icon.input
+        / = form_field_with_placeholder f, 'text_field', :email
+        = f.text_field :email, autofocus: true
+        i.user.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .field
+      = f.label :password
+      .ui.left.labeled.icon.input
+        = f.password_field :password
+        i.lock.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .inline.field
+      .ui.checkbox
+        = f.check_box :remember_me
+        = f.label :remember_me
+    = f.submit t('action.submit'), class: "ui blue submit button"
+  .ui.bottom.attached.info.message
+    = render "devise/shared/links"

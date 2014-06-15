@@ -1,0 +1,9 @@
+tr
+  td= user.email
+  td= user.name
+  td= user.phone
+  td= user.qq
+  td= user.birthday
+  td
+    - if user.admin
+      i.checkmark.icon

@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title Users
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body
+    .container.page_header
+      = render 'layouts/header'
+    .container
+      .flash_msg
+        = render 'layouts/flash_notice'
+    = yield

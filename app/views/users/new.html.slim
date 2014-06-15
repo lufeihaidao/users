@@ -1,0 +1,26 @@
+.container
+  .ui.attached.message
+    .header
+      = t('action.create', model: t('activerecord.models.user'))
+  = form_for(@user, html: { id: "user_create",
+                     class: "ui form attached fluid segment"}) do |f|
+    - error_msgs = f.object.errors.full_messages
+    / - binding.pry
+    - if error_msgs.any?
+      .ui.red.message
+        - error_msgs.each do |m|
+          li= m
+    .field
+      = f.label :email
+      .ui.left.labeled.icon.input
+        = f.text_field :email, autofocus: true
+        i.user.icon
+        .ui.corner.label
+          i.icon.asterisk
+    .inline.field
+      .ui.checkbox
+        = f.check_box :admin
+        = f.label :admin
+    = f.submit t('action.submit'), class: "ui blue submit button"
+  .ui.bottom.attached.info.message
+    = link_to t("action.back"), :back
