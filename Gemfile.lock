@@ -1,5 +1,5 @@
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
@@ -107,6 +107,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    puma (2.13.4)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -211,6 +212,7 @@ DEPENDENCIES
   pry
   pry-byebug
   pry-rails
+  puma
   rails
   rails_12factor
   sass-rails
