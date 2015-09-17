@@ -8,8 +8,8 @@
 puts "管理员, admin@admin.com:iamadmin!"
 User.create email: 'admin@admin.com', name: '管理员', password: 'iamadmin!',
             password_confirmation: 'iamadmin!', birthday: Date.today, admin: true
-puts "测试数据, u#{i}@c.com:12345678"
+puts '测试数据, u#{i}@c.com:12345678'
 50.times do |i|
-  User.create email: "u#{i}@c.com", password: '12345678',
-              password_confirmation: '12345678', birthday: Date.today
+  User.create email: "u#{i}@c.com", name: "I am #{i}", password: '12345678',
+              password_confirmation: '12345678', birthday: Date.today, admin: false
 end

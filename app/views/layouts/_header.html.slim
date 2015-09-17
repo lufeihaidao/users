@@ -1,34 +1,35 @@
-.ui.menu
-  = link_to root_path, class: "item #{active? 'home#index'}" do
-    i.home.icon
-    | 主页
-  = link_to users_path, class: "item #{active? 'users#index'}" do
-    i.user.icon
-    | 朋友们
-  a.item class=(active? 'messages#index')
-    i.mail.icon
-    | 消息
-  .right.menu
-    .item
-      .ui.icon.input
-        input placeholder="搜索中..." type="text"
-          i.search.link.icon
-    - if user_signed_in?
-      .ui.dropdown.item.pointing.link
-        = current_user.name
-        i.icon.dropdown
-        .menu
-          = link_to edit_user_path(current_user), class: 'item' do
-            i.edit.icon
-            | 编辑个人信息
-          = link_to edit_user_registration_path, class: 'item' do
-            i.settings.icon
-            | 账户安全设置
-          = link_to destroy_user_session_path, method: :delete, class: 'item' do
-            i.sign.out.icon
-            | 退出
-    - else
-      = link_to new_user_session_path,
-          class: "ui item #{active? 'sessions#new'}" do
-        i.icon.sign.in
-        |登录
+.ui.attached.stackable.menu
+  .ui.container
+    = link_to root_path, class: "item #{active? 'home#index'}" do
+      i.home.icon
+      | 主页
+    = link_to users_path, class: "item #{active? 'users#index'}" do
+      i.user.icon
+      | 朋友们
+    a.item class=(active? 'messages#index')
+      i.mail.icon
+      | 消息
+    .right.menu
+      .item
+        .ui.icon.input
+          input placeholder="搜索中..." type="text"
+            i.search.link.icon
+      - if user_signed_in?
+        .ui.dropdown.item.pointing.link
+          = current_user.name
+          i.icon.dropdown
+          .menu
+            = link_to edit_user_path(current_user), class: 'item' do
+              i.edit.icon
+              | 编辑个人信息
+            = link_to edit_user_registration_path, class: 'item' do
+              i.settings.icon
+              | 账户安全设置
+            = link_to destroy_user_session_path, method: :delete, class: 'item' do
+              i.sign.out.icon
+              | 退出
+      - else
+        = link_to new_user_session_path,
+            class: "ui item #{active? 'sessions#new'}" do
+          i.icon.sign.in
+          |登录

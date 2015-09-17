@@ -8,18 +8,18 @@
     / .ui.error.message
     .field
       = f.label :email
-      .ui.left.labeled.icon.input
+      .ui.left.corner.labeled.icon.input
         / = form_field_with_placeholder f, 'text_field', :email
         = f.text_field :email, autofocus: true
         i.user.icon
-        .ui.corner.label
+        .ui.left.corner.label
           i.icon.asterisk
     .field
       = f.label :password
-      .ui.left.labeled.icon.input
+      .ui.left.corner.labeled.icon.input
         = f.password_field :password
         i.lock.icon
-        .ui.corner.label
+        .ui.left.corner.label
           i.icon.asterisk
     .inline.field
       .ui.checkbox

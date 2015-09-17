@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def add
+    binding.pry
     @user = User.add user_create_params[:email]
     respond_to do |format|
       if @user.save

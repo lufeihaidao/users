@@ -15,6 +15,8 @@
 //= require semantic-ui
 //= require turbolinks
 //= require messenger
+//= require i18n
+//= require i18n/translations
 //= require_tree .
 Messenger.options = {
     extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
@@ -22,8 +24,9 @@ Messenger.options = {
 }
 function messenger(msg, type){
   Messenger().post({
-    message: msg, 
-    type: type, 
+    message: msg,
+    type: type,
     showCloseButton: true
   });
 }
+Turbolinks.enableProgressBar();

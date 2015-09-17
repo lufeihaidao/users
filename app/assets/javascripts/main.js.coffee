@@ -10,6 +10,7 @@ $(document).on "page:change", ->
   valid_rule = {}
   fields.forEach (e, i) ->
     valid_rule[i] = e
-  $(dom).form valid_rule,
+  $(dom).form
+    fields: valid_rule,
     inline: true
     on: "blur"

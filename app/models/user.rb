@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :name, presence: true, length: {minimum: 2, maxmum: 10}
-  validates :admin, presence: true
+  validates :admin, inclusion: {in: [true, false]}
 
   private
   def add email
-    new email: email, password: email, password_confirm: email
+    new email: email, password: email, password_confirmation: email
   end
 end

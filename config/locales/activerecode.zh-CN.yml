@@ -11,7 +11,7 @@ zh-CN:
         password: "密码"
         birthday: "生日"
         qq: "企鹅号"
-        password_confirmation: "密码验证"
+        password_confirmation: "密码确认"
         phone: "电话"
         remember_me: "记住我"
         current_password: 当前密码

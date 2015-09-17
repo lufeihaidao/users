@@ -12,10 +12,10 @@
           li= m
     .field
       = f.label :email
-      .ui.left.labeled.icon.input
+      .ui.left.corner.labeled.icon.input
         = f.text_field :email, autofocus: true
         i.user.icon
-        .ui.corner.label
+        .ui.left.corner.label
           i.icon.asterisk
     = f.submit t('action.submit'), class: "ui blue submit button"
   .ui.bottom.attached.info.message
