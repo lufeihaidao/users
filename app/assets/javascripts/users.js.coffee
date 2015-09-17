@@ -31,5 +31,6 @@ $(document).on "page:change", ->
       prompt: I18n.t('errors.messages.too_short', {count: 8})
     ]
   inline_validate('form#user_sign_in', [email, password])
+  inline_validate('form#user_add', [email])
   inline_validate('form#current_user_edit', [email, current_password])
   inline_validate('form#user_sign_up', [email, password, password_confirmation])

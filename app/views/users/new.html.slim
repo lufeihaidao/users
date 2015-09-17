@@ -2,7 +2,7 @@
   .ui.attached.message
     .header
       = t('action.create', model: t('activerecord.models.user'))
-  = form_for(@user, html: { id: "user_create",
+  = form_for(@user, url: {action: 'add'}, html: { id: "user_add",
                      class: "ui form attached fluid segment"}) do |f|
     - error_msgs = f.object.errors.full_messages
     / - binding.pry
