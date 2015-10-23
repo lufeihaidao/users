@@ -1,14 +1,17 @@
 html {
   font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 }
-// .container {
-//     width: 960px;
-//     margin: 0 auto;
-// }
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
 .flash_msg {
   margin-top: 1rem;
 }
 html.turbolinks-progress-bar::before {
   background-color: #444333 !important;
   // height: 5px !important;
+}
+img {
+    max-width: 100%;
 }
