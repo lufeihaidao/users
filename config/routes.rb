@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     collection do
       get 'page/:page', action: :index
       post 'add', action: :add
+      patch ':id/upload_avatar', action: :upload_avatar
     end
   end
 end

@@ -23,6 +23,10 @@ gem 'kaminari'
 gem "messengerjs-rails"
 # i18n js
 gem "i18n-js", ">= 3.0.0.rc11"
+# carrierwave
+gem 'carrierwave'
+# minimagick
+gem 'mini_magick'
 # server for now
 gem 'thin', group: :development
 # pry debug
