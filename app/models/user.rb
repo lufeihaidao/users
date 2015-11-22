@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :articles
+
   validates :name, presence: true, length: {minimum: 2, maxmum: 10}
   validates :admin, inclusion: {in: [true, false]}
 

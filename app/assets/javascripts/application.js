@@ -17,6 +17,7 @@
 //= require messenger
 //= require i18n
 //= require i18n/translations
+//= require medium-editor.min
 //= require_tree .
 Messenger.options = {
     extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',

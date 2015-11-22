@@ -1,9 +1,11 @@
 class Article < ActiveRecord::Base
 
-  validates :name, presence: true, length: {minimum: 2, maxmum: 10}
-  validates :admin, inclusion: {in: [true, false]}
+  belongs_to :user
+  validates :title, presence: true, length: {minimum: 2, maxmum: 140}
+  validates :user, presence: true
+  validates :content, presence: true
 
-  def self.add email
-    self.new email: email, password: email, password_confirmation: email
+  def self.top_article
+    order(top_touched_at: :desc).first
   end
 end

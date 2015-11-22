@@ -8,4 +8,5 @@ Rails.application.routes.draw do
       patch ':id/upload_avatar', action: :upload_avatar
     end
   end
+  resources :articles
 end

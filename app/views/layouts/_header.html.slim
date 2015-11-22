@@ -2,13 +2,16 @@
   .ui.container
     = link_to root_path, class: "item #{active? 'home#index'}" do
       i.home.icon
-      | 主页
+      | 如影随形
     = link_to users_path, class: "item #{active? 'users#index'}" do
       i.user.icon
-      | 朋友们
-    a.item class=(active? 'messages#index')
+      | 倾盖如故
+    = link_to articles_path, class: "item #{active? 'articles#index'}" do
       i.mail.icon
-      | 消息
+      | 鸿雁长飞
+    a.item class=(active? 'images#index')
+      i.photo.icon
+      | 镜花水月
     .right.menu
       .item
         .ui.icon.input

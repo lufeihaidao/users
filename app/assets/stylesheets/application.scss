@@ -11,9 +11,11 @@
  * file per style scope.
  *
 
+ *= require medium-editor.min
+ *= require medium-editor-theme.default.min
  *= require_tree .
  *= require messenger
-   *= require messenger-theme-air
+ *= require messenger-theme-air
  */
 
 @import "semantic-ui";
