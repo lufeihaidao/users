@@ -13,4 +13,7 @@ Rails.application.routes.draw do
       patch 'top_touch', action: :top_touch
     end
   end
+  resources :albums do
+    resources :images
+  end
 end
