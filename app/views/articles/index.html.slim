@@ -4,3 +4,6 @@ ul
       h1
         =link_to "#{sanitize(article.title, tags: [])}", article
       == article.content
+      = form_for article, url: top_touch_article_path(article), remote: true, method: :patch do |f|
+        = f.submit "置顶", class: "ui black submit button"
+    hr

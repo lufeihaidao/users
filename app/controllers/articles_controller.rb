@@ -35,6 +35,11 @@ class ArticlesController < ApplicationController
   def destroy
   end
 
+  def top_touch
+    @article = Article.find params[:id]
+    @article.touch :top_touched_at
+  end
+
   private
   def correct_user
     @article = Article.find params[:id]

@@ -8,5 +8,9 @@ Rails.application.routes.draw do
       patch ':id/upload_avatar', action: :upload_avatar
     end
   end
-  resources :articles
+  resources :articles do
+    member do
+      patch 'top_touch', action: :top_touch
+    end
+  end
 end
