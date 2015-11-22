@@ -37,13 +37,13 @@
           .ui.checkbox
             = f.check_box :admin
             = f.label :admin
-        = f.submit t('action.submit'), class: "ui blue submit button"
+        = f.submit class: "ui black submit button"
     .column
       = form_for @user, url: {action: 'upload_avatar'}, html: { multipart: true, class: "ui form attached fluid segment" } do |f|
         .field
           = f.label :avatar
           = image_tag(@user.avatar_url) if @user.avatar?
           = f.file_field :avatar
-          = f.submit t('action.submit'), class: "ui blue submit button"
+          = f.submit class: "ui black submit button"
   .ui.bottom.attached.info.message
     = link_to t("action.back"), :back

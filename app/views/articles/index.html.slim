@@ -1,1 +1,6 @@
-p articles list
+ul
+  -@articles.each do |article|
+    li
+      h1
+        =link_to "#{sanitize(article.title, tags: [])}", article
+      == article.content

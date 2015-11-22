@@ -2,6 +2,7 @@ zh-CN:
   activerecord:
     models:
       user: "用户"
+      article: 文章
     attributes:
       user:
         admin: "管理员"
@@ -16,3 +17,6 @@ zh-CN:
         remember_me: "记住我"
         current_password: 当前密码
         avatar: 头像
+      article:
+        title: 标题
+        content: 内容
