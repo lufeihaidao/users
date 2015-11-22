@@ -1,0 +1,25 @@
+=form_for @article, html: {class: "ui form"} do |f|
+  - error_msgs = f.object.errors.full_messages
+  - if error_msgs.any?
+    .ui.red.message
+      - error_msgs.each do |m|
+        li= m
+  .field
+    /input[type='text' ]
+    h1 =f.text_area :title, class: "title-editable"
+
+  .field
+    =f.text_area :content,class: "content-editable"
+    /textarea.editable
+  .field
+    = f.submit t('action.submit'), class: "ui blue submit button"
+
+coffee:
+  title_editor = new MediumEditor '.title-editable',
+    toolbar: false
+    placeholder:
+      text: '请输入标题'
+  content_editor = new MediumEditor '.content-editable',
+    imageDragging: true
+    placeholder:
+      text: '请输入正文, 选中添加样式'
