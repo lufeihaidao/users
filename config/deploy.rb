@@ -1,7 +1,7 @@
 require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
-# require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
+require 'mina/rbenv'  # for rbenv support. (http://rbenv.org)
 # require 'mina/rvm'    # for rvm support. (http://rvm.io)
 
 # Basic settings:
@@ -10,9 +10,9 @@ require 'mina/git'
 #   repository   - Git repo to clone from. (needed by mina/git)
 #   branch       - Branch name to deploy. (needed by mina/git)
 
-set :domain, '218.244.149.168'
+set :domain, 'aliyun'
 set :deploy_to, '/home/haidao/zhangdansan'
-set :repository, 'git@github.com:lufeihaidao/users'
+set :repository, 'https://github.com/lufeihaidao/users.git'
 set :branch, 'master'
 
 # For system-wide RVM install.
@@ -23,9 +23,9 @@ set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'config/secrets.yml', 'log']
 
 # Optional settings:
-  set :user, 'haidao'    # Username in the server to SSH to.
-  set :port, '22'     # SSH port number.
-  set :forward_agent, true     # SSH forward_agent.
+  # set :user, 'haidao'    # Username in the server to SSH to.
+  # set :port, '22'     # SSH port number.
+  # set :forward_agent, true     # SSH forward_agent.
 
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
