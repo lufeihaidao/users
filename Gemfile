@@ -36,6 +36,8 @@ gem 'pry-byebug', :group => :development
 # better errors
 gem "better_errors", :group => :development
 gem "binding_of_caller", :group => :development
+# rails chrome
+gem 'meta_request', :group => :development
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -61,5 +63,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'rails_12factor', group: :production
-gem 'puma'
-ruby '2.1.5'
+gem 'puma', group: :production
+gem 'passenger', group: :production
+gem 'mina', group: :development
+ruby '2.3.0'

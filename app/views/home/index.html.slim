@@ -1,3 +1,4 @@
 .content
-  h1= sanitize(@article.title, tags: [])
-  == @article.content
+  - unless @article.nil?
+    h1= sanitize(@article.title, tags: [])
+    == @article.content
